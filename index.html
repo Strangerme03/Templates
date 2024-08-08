@@ -9,87 +9,56 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <title>Home</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-        }
-        body {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .content {
-            flex: 1;
-        }
         .navbar {
-            padding: 1rem 2rem;
             background-color: #343a40;
         }
+
         .navbar-brand img {
             height: 40px;
+            border-radius: 50%;
         }
+
         .navbar-nav .nav-link {
-            color: #ffffff !important;
-            padding: 0.5rem 1rem;
-            font-size: 16px;
-            transition: background-color 0.3s, color 0.3s;
+            color: #ffffff;
+            font-weight: 500;
         }
+
         .navbar-nav .nav-link:hover {
             color: #007bff !important;
             background-color: #495057;
             border-radius: 4px;
         }
+
         .navbar-toggler {
-            border-color: #ffffff;
-        }
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-        }
-        .welcome-section {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #ffffff 0%, #e9ecef 100%);
-            color: #343a40;
-        }
-        .welcome-section h1 {
-            margin-bottom: 20px;
-            font-size: 3.5rem;
-            font-weight: 700;
-        }
-        .welcome-section p {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-            color: #495057;
-        }
-        .footer {
-            background-color: #f8f9fa;
-            color: #495057;
-            padding: 20px 0;
-            text-align: center;
-            border-top: 1px solid #dee2e6;
-            margin-top: auto;
-        }
-        .footer .social-icons a {
-            color: #495057;
-            font-size: 20px;
-            margin: 0 15px;
-            transition: color 0.3s;
-        }
-        .footer .social-icons a:hover {
-            color: #007bff;
+            border: none;
+            outline: none;
         }
     </style>
 </head>
-<body>
 
+<body>
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img th:src="@{/images/logo.png}" src="../static/images/logo.png" width="auto" height="40" class="d-inline-block align-top" alt=""/>
+            <img th:src="@{/images/logo.png}" src="../static/images/logo.png" width="auto" height="40" class="d-inline-block align-top" alt="Logo"/>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -121,27 +90,440 @@
     </div>
 </nav>
 
-<section class="welcome-section">
-    <div class="container">
-        <h1>Welcome to Our Online Bakery Shop!</h1>
-        <p>Indulge in our freshly baked cakes and bakery items made with love. Explore our collection and find your new favorite treat.</p>
-    </div>
-</section>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <p>&copy; Online Bakery Shop. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="https://facebook.com/yourprofile" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com/yourprofile" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com/yourprofile" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+<!-- Hero Section Begin -->
+<section class="hero">
+    <div class="hero__slider owl-carousel">
+        <div class="hero__item set-bg" data-setbg="img/hero/hero-1.jpg">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="hero__text">
+                            <h2>Making your life sweeter one bite at a time!</h2>
+                            <a href="#" class="primary-btn">Our cakes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero__item set-bg" data-setbg="img/hero/hero-1.jpg">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="hero__text">
+                            <h2>Making your life sweeter one bite at a time!</h2>
+                            <a href="#" class="primary-btn">Our cakes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</footer>
+</section>
+<!-- Hero Section End -->
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!-- About Section Begin -->
+<section class="about spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="about__text">
+                    <div class="section-title">
+                        <span>About Cake shop</span>
+                    </div>
+                    <p>Welcome to Online Bakery Shop, your premier destination for exquisite baked goods delivered right to your doorstep. Founded on a passion for baking and a love for exceptional flavors, our online bakery combines artisanal craftsmanship with modern convenience.
+
+                        We believe that every occasion deserves a special touch. Our skilled bakers use only the finest ingredients to create a delectable range of cakes, cookies, pastries, and more. Whether you're celebrating a milestone, treating yourself, or simply indulging in a sweet moment, our handcrafted confections are designed to bring joy and satisfaction.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="about__bar">
+                    <div class="about__bar__item">
+                        <p>Cake design</p>
+                        <div id="bar1" class="barfiller">
+                            <div class="tipWrap"><span class="tip"></span></div>
+                            <span class="fill" data-percentage="95"></span>
+                        </div>
+                    </div>
+                    <div class="about__bar__item">
+                        <p>Cake Class</p>
+                        <div id="bar2" class="barfiller">
+                            <div class="tipWrap"><span class="tip"></span></div>
+                            <span class="fill" data-percentage="80"></span>
+                        </div>
+                    </div>
+                    <div class="about__bar__item">
+                        <p>Cake Recipes</p>
+                        <div id="bar3" class="barfiller">
+                            <div class="tipWrap"><span class="tip"></span></div>
+                            <span class="fill" data-percentage="90"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Section End -->
+
+<!-- Categories Section Begin -->
+<div class="categories">
+    <div class="container">
+        <div class="row">
+            <div class="categories__slider owl-carousel">
+                <div class="categories__item">
+                    <div class="categories__item__icon">
+                        <span class="flaticon-029-cupcake-3"></span>
+                        <h5>Cupcake</h5>
+                    </div>
+                </div>
+                <div class="categories__item">
+                    <div class="categories__item__icon">
+                        <span class="flaticon-034-chocolate-roll"></span>
+                        <h5>Butter</h5>
+                    </div>
+                </div>
+                <div class="categories__item">
+                    <div class="categories__item__icon">
+                        <span class="flaticon-005-pancake"></span>
+                        <h5>Red Velvet</h5>
+                    </div>
+                </div>
+                <div class="categories__item">
+                    <div class="categories__item__icon">
+                        <span class="flaticon-030-cupcake-2"></span>
+                        <h5>Biscuit</h5>
+                    </div>
+                </div>
+                <div class="categories__item">
+                    <div class="categories__item__icon">
+                        <span class="flaticon-006-macarons"></span>
+                        <h5>Donut</h5>
+                    </div>
+                </div>
+                <div class="categories__item">
+                    <div class="categories__item__icon">
+                        <span class="flaticon-006-macarons"></span>
+                        <h5>Cupcake</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Categories Section End -->
+
+<!-- Product Section Begin -->
+<section class="product spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="img/shop/product-1.jpg">
+                        <div class="product__label">
+                            <span>Cupcake</span>
+                        </div>
+                    </div>
+                    <div class="product__item__text">
+                        <h6><a href="#">Dozen Cupcakes</a></h6>
+                        <div class="product__item__price">Rs.50</div>
+                        <div class="cart_add">
+                            <a href="#">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="img/shop/product-2.jpg">
+                        <div class="product__label">
+                            <span>Cupcake</span>
+                        </div>
+                    </div>
+                    <div class="product__item__text">
+                        <h6><a href="#">Cookies and Cream</a></h6>
+                        <div class="product__item__price">Rs.45</div>
+                        <div class="cart_add">
+                            <a href="#">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="img/shop/product-3.jpg">
+                        <div class="product__label">
+                            <span>Cupcake</span>
+                        </div>
+                    </div>
+                    <div class="product__item__text">
+                        <h6><a href="#">Gluten Free Mini Dozen</a></h6>
+                        <div class="product__item__price">Rs.30</div>
+                        <div class="cart_add">
+                            <a href="#">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="img/shop/product-4.jpg">
+                        <div class="product__label">
+                            <span>Cupcake</span>
+                        </div>
+                    </div>
+                    <div class="product__item__text">
+                        <h6><a href="#">Cookie Dough</a></h6>
+                        <div class="product__item__price">Rs.25</div>
+                        <div class="cart_add">
+                            <a href="#">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="img/shop/product-5.jpg">
+                        <div class="product__label">
+                            <span>Cupcake</span>
+                        </div>
+                    </div>
+                    <div class="product__item__text">
+                        <h6><a href="#">Vanilla Salted Caramel</a></h6>
+                        <div class="product__item__price">Rs.85</div>
+                        <div class="cart_add">
+                            <a href="#">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="img/shop/product-6.jpg">
+                        <div class="product__label">
+                            <span>Cupcake</span>
+                        </div>
+                    </div>
+                    <div class="product__item__text">
+                        <h6><a href="#">German Chocolate</a></h6>
+                        <div class="product__item__price">Rs.15</div>
+                        <div class="cart_add">
+                            <a href="#">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="img/shop/product-7.jpg">
+                        <div class="product__label">
+                            <span>Cupcake</span>
+                        </div>
+                    </div>
+                    <div class="product__item__text">
+                        <h6><a href="#">Dulce De Leche</a></h6>
+                        <div class="product__item__price">Rs.40</div>
+                        <div class="cart_add">
+                            <a href="#">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="img/shop/product-8.jpg">
+                        <div class="product__label">
+                            <span>Cupcake</span>
+                        </div>
+                    </div>
+                    <div class="product__item__text">
+                        <h6><a href="#">Mississippi Mud</a></h6>
+                        <div class="product__item__price">Rs.30</div>
+                        <div class="cart_add">
+                            <a href="#">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Product Section End -->
+
+
+
+
+
+<!-- Testimonial Section Begin -->
+<section class="testimonial spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="section-title">
+                    <span>Testimonial</span>
+                    <h2>Our client say</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="testimonial__slider owl-carousel">
+                <div class="col-lg-6">
+                    <div class="testimonial__item">
+                        <div class="testimonial__author">
+                            <div class="testimonial__author__pic">
+                                <img src="img/testimonial/ta-1.jpg" alt="">
+                            </div>
+                            <div class="testimonial__author__text">
+                                <h5>Sunil Rai</h5>
+                                <span>New york</span>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class="icon_star"></span>
+                            <span class="icon_star"></span>
+                            <span class="icon_star"></span>
+                            <span class="icon_star"></span>
+                            <span class="icon_star-half_alt"></span>
+                        </div>
+                        <p>I recently ordered a custom cake for my daughter's birthday, and it exceeded all my expectations! The design was exactly what I asked for, and the taste was absolutely delicious. The cake was moist and flavorful, with just the right amount of sweetness. The staff was incredibly helpful and accommodating throughout the process. I will definitely be coming back for our future celebrations!</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="testimonial__item">
+                        <div class="testimonial__author">
+                            <div class="testimonial__author__pic">
+                                <img src="img/testimonial/ta-1.jpg" alt="">
+                            </div>
+                            <div class="testimonial__author__text">
+                                <h5>Nandita Gurung</h5>
+                                <span>Hetauda</span>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class="icon_star"></span>
+                            <span class="icon_star"></span>
+                            <span class="icon_star"></span>
+                            <span class="icon_star"></span>
+                            <span class="icon_star-half_alt"></span>
+                        </div>
+                        <p>If you’re looking for a cake shop that delivers both exceptional taste and exquisite design, this is the place. I ordered a cake for my son’s graduation, and it was not only stunning but also incredibly delicious. The shop has a wide variety of options, and their customer service is outstanding. They really know how to make special occasions memorable. Highly recommend their cakes for any event!</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="testimonial__item">
+                        <div class="testimonial__author">
+                            <div class="testimonial__author__pic">
+                                <img src="img/testimonial/ta-2.jpg" alt="">
+                            </div>
+                            <div class="testimonial__author__text">
+                                <h5>Kritima Khadka</h5>
+                                <span>Kathmandu</span>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class="icon_star"></span>
+                            <span class="icon_star"></span>
+                            <span class="icon_star"></span>
+                            <span class="icon_star"></span>
+                            <span class="icon_star-half_alt"></span>
+                        </div>
+                        <p>I have been a cake lover since young. The cakes here are great and customer service is nice.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonial Section End -->
+
+
+
+<!-- Map Begin -->
+<div class="map">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-7">
+                <div class="map__inner">
+                    <h6>Bagmati</h6>
+                    <ul>
+                        <li>Chabahil,Kathmandu,Nepal</li>
+                        <li>info@onlinebakery.com</li>
+                        <li>9805888012</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Footer Section Begin -->
+<footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="footer__widget">
+                    <h6>WORKING HOURS</h6>
+                    <ul>
+                        <li>Sunday - Friday: 08:00 am – 08:30 pm</li>
+                        <li>Saturday: 10:00 am – 16:30 pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="footer__about">
+                    <div class="footer__logo">
+                        <a href="#"><img src="#" alt="logo"></a>
+                    </div>
+                    <p>Delight in a world of gourmet treats with our online bakery shop, offering freshly baked, artisanal cakes, pastries, and cookies delivered straight to your door with convenience and quality.</p>
+                    <div class="footer__social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="footer__newslatter">
+                    <h6>Subscribe</h6>
+                    <p>Get latest updates and offers.</p>
+                    <form action="#">
+                        <input type="text" placeholder="Email">
+                        <button type="submit"><i class="fa fa-send-o"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</footer>
+<!-- Footer Section End -->
+
+<!-- Search Begin -->
+<div class="search-model">
+    <div class="h-100 d-flex align-items-center justify-content-center">
+        <div class="search-close-switch">+</div>
+        <form class="search-model-form">
+            <input type="text" id="search-input" placeholder="Search here.....">
+        </form>
+    </div>
+</div>
+<!-- Search End -->
+
+<!-- Js Plugins -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/jquery.barfiller.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/main.js"></script>
 </body>
+
 </html>
